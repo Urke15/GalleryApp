@@ -17,6 +17,7 @@ public @FindBy(id="password")
 
 public @FindBy(css = ".btn.btn-custom")
     WebElement buttonSubmit;
+    
 
 public void insertEmail(String email){
     fieldEmail.sendKeys(email);

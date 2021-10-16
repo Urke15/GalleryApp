@@ -12,7 +12,6 @@ public class Base {
 
     @Before
     public void setUp() {
-
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         wdwait = new WebDriverWait(driver, 0);
@@ -21,9 +20,8 @@ public class Base {
     }
 
     @After
-
     public void tearDown() {
-        // driver.close();
-        //driver.quit();
+         driver.close();
+         driver.quit();
     }
 }
