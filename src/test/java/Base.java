@@ -14,11 +14,11 @@ public class Base {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        wdwait = new WebDriverWait(driver, 0);
+        wdwait = new WebDriverWait(driver, 10);
         driver.manage().window().maximize();
         driver.get("https://gallery-app.vivifyideas.com/");
     }
-
+    
     @After
     public void tearDown() {
          driver.close();

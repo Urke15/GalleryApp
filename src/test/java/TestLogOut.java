@@ -23,10 +23,9 @@ public class TestLogOut extends Base {
 
     @Test
     public void userLogOut(){
-        Helper.threadSleep(1);
-        logOutPage.clickLogOut();
-        Helper.threadSleep(1);
-        WebElement createGalleryButton = driver.findElement(By.cssSelector("#navbarTogglerDemo01 > ul.navbar-nav.mr-auto.mt-2.mt-lg-0 > li:nth-child(3) > a"));
-        Assert.assertFalse(createGalleryButton.isDisplayed() || createGalleryButton.isEnabled());
+        logOutPage.waitAndClickLogOut();
+        String fieldEmailCssSelector = "#email";
+        WebElement fieldEmail = driver.findElement(By.cssSelector(fieldEmailCssSelector));
+        Assert.assertTrue(fieldEmail.isDisplayed() && fieldEmail.isEnabled());
     }
 }
